@@ -13,7 +13,7 @@ const formatTime = time => {
   return minutes + ":" + seconds;
 };
 
-export default function CountDown({ seconds, setSeconds }) {
+export default function CountDown({ seconds, setSeconds, score }) {
   // const [count, setCount] = useState(seconds);
   const timerId = useRef();
 
@@ -28,6 +28,9 @@ export default function CountDown({ seconds, setSeconds }) {
   // stop setInterval
   useEffect(() => {
     if (seconds <= 0) {
+      clearInterval(timerId.current);
+    }
+    if (score === 6) {
       clearInterval(timerId.current);
     }
   }, [seconds]);

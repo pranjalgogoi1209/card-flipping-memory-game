@@ -2,25 +2,34 @@ import React, { useEffect, useState } from "react";
 import styles from "./cards.module.css";
 import cardFront from "./../../../assets/homePage/cards/avengers.jpg";
 
-export default function Cards({ cards, setCards }) {
+export default function Cards({ cards, setCards, setScore }) {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
+  const [isClickable, setIsClickable] = useState(true);
 
   // handle choice
   const handleChoice = card => {
     console.log(card);
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    if (isClickable) {
+      choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    }
   };
 
   // compare two selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
-      if (choiceOne.src === choiceTwo.src) {
+      setIsClickable(false);
+      console.log("clickable => false");
+      if (choiceOne.name === choiceTwo.name) {
         console.log("cards match");
+
+        // score increase by 1
+        setScore(prev => prev + 1);
+
         setCards(prevCards => {
           return prevCards.map(card => {
             // it will work for both the cards, bcz src is same of choiceOne and choiceTwo
-            if (card.src === choiceOne.src) {
+            if (card.name === choiceOne.name) {
               console.log("card is updated");
               const updatedCard = { ...card, isMatched: true };
               console.log(cards);
@@ -45,6 +54,8 @@ export default function Cards({ cards, setCards }) {
   const resetChoices = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
+    setIsClickable(true);
+    console.log("clickable => true");
   };
 
   return (
