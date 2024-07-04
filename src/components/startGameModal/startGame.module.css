@@ -1,0 +1,28 @@
+.StartGame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  .mainContainer {
+    width: 30vw;
+    background-color: #fff;
+    color: #000;
+    padding: 3vw;
+    border-radius: 1vw;
+    gap: 2vw;
+    p {
+      font-size: 1.8vw;
+      font-weight: 600;
+    }
+    button {
+      gap: 1vw;
+      svg {
+        font-size: 1.2vw;
+      }
+    }
+  }
+}

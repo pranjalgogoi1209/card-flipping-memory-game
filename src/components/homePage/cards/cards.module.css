@@ -9,8 +9,9 @@
   .cardContainer {
     /* border: 1px solid white; */
     .imgContainer {
-      width: 10vw;
-      height: 15vw;
+      cursor: pointer;
+      width: 11vw;
+      /* height: 15vw; */
       position: relative;
       img {
         width: 100%;
@@ -23,10 +24,12 @@
         transform: rotateY(0deg);
         transition: all ease-in 0.2s;
         transition-delay: 0.2s;
+        border-radius: 1vw;
       }
       .cardBack {
         transform: rotateY(90deg);
         transition: all ease-in 0.2s;
+        border-radius: 1vw;
       }
     }
     .flipped {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./cards.module.css";
-import cardFront from "./../../../assets/homePage/cards/avengers.jpg";
+import cardFront from "./../../../assets/homePage/cards/avengers.png";
 
 export default function Cards({ cards, setCards, setScore }) {
   const [choiceOne, setChoiceOne] = useState(null);

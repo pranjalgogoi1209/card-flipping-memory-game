@@ -1,2 +1,18 @@
 .HomePage {
+  gap: 1vw;
+  .header {
+    padding: 2vw 4vw;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+
+    h2 {
+      /* border: 1px solid white; */
+      width: 10vw;
+      font-size: 2vw;
+    }
+  }
+  .cardsContainer {
+    padding: 2vw;
+  }
 }

@@ -11,19 +11,36 @@
 body {
   background-color: #212121;
   color: #f1f1f1;
-  border: 1px solid #fff;
   width: 100vw;
   height: 100vh;
-  padding: 2vw;
+  background-image: url("./assets/homePage/bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn {
-  padding: 0.5vw 1.5vw;
-  font-size: 1.5vw;
+  border: 0;
+  outline: 0;
+  padding: 0.6vw 1.2vw;
+  font-size: 1.3vw;
   font-weight: bold;
-  background-color: aliceblue;
   cursor: pointer;
-  &:hover {
-    background-color: cornflowerblue;
-  }
+  border-radius: 0.5vw;
+  border: 0.1vw solid black;
+  background-color: #042b6b;
+  color: #fff;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
